@@ -20,11 +20,11 @@ Every image has its filename printed below it. This is in a fixed size font, so 
 ## ccs.sh – single sheet per directory
 My original script creates a single contact sheet per directory supplied. Because ImageMagick has to load all of the images into memory and composite them, this can run quite a while (minutes) for large numbers of images. I have had it successfully generate for a directory of over 1,400 images on a modest system configuration.
 
-The contact sheet will be named the same as the directory and be placed at the same level as the directory. This means your directory MyDir and the contact sheet MyDir.jpg will appear together when sorted by name.
+The contact sheet will be named the same as the directory and be placed at the same level as the directory. This means your directory `MyDir` and the contact sheet `MyDir.jpg` will appear together when sorted by name.
 
 ## ccsm.sh – multiple sheets per directory
 This is a development of the original script above, which addresses the fact that a contact sheet of over 1,400 images leads to pretty small thumbnails when viewing the whole thing on screen!
 
 It will divide up the list of images into blocks of 144, with an extra block containing the remainder. For example, a directory of 359 images will be split into two sheets of 144 images and one of 71 images. The first two will be laid out in a 16x9 grid. The latter will approximate this ratio with 11 columns and 7 rows, the last of which will only have 5 images.
 
-The contact sheets for MyDir with 359 images will be called MyDir-01, MyDir-02, and MyDir-03 and will be placed at the same level as the directory.  This means your directory MyDir and all of the contact sheets MyDir-nn.jpg will appear together when sorted by name.
+The contact sheets for `MyDir` with 359 images will be called `MyDir-01`, `MyDir-02`, and `MyDir-03` and will be placed at the same level as the directory.  This means your directory `MyDir` and all of the contact sheets `MyDir-nn.jpg` will appear together when sorted by name.
