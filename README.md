@@ -28,3 +28,15 @@ This is a development of the original script above, which addresses the fact tha
 It will divide up the list of images into blocks of 144, with an extra block containing the remainder. For example, a directory of 359 images will be split into two sheets of 144 images and one of 71 images. The first two will be laid out in a 16x9 grid. The latter will approximate this ratio with 11 columns and 7 rows, the last of which will only have 5 images.
 
 The contact sheets for `MyDir` with 359 images will be called `MyDir-01`, `MyDir-02`, and `MyDir-03` and will be placed at the same level as the directory.  This means your directory `MyDir` and all of the contact sheets `MyDir-nn.jpg` will appear together when sorted by name.
+
+## Integrating into macOS Finder
+This is very easy to do:
+1. Launch **Automator**.
+2. Create a new **Quick Action**.
+3. Drag in a **Run Shell Script** action from the **Utilities** section.
+4. Set **Workflow receives current** to `folders` **in** `Finder.app`. (Set the image and colour if you wish.)
+5. Set **Shell** to `/bin/zsh` and **Pass input** to `as arguments`.
+6. Paste either of the scripts into the body of the action, and remove the initial `#!/bin/zsh` line.
+7. Press Cmd-S to save and give it a name. I just call mine `Contact sheet` or `Contact sheets`.
+
+That's it! Select some directories that contain jpegs, right click on one of them, and from the `Quick Actions` sub-menu, choose your new script. A cog will appear in the menu bar while the contact sheets are generated and you will see them appear in Finder.
