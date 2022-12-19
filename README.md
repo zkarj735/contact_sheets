@@ -27,7 +27,7 @@ This is a development of the original script above, which addresses the fact tha
 
 It will divide up the list of images into blocks of 144, with an extra block containing the remainder. For example, a directory of 359 images will be split into two sheets of 144 images and one of 71 images. The first two will be laid out in a 16x9 grid. The latter will approximate this ratio with 11 columns and 7 rows, the last of which will only have 5 images.
 
-The contact sheets for `MyDir` with 359 images will be called `MyDir-01`, `MyDir-02`, and `MyDir-03` and will be placed at the same level as the directory.  This means your directory `MyDir` and all of the contact sheets `MyDir-nn.jpg` will appear together when sorted by name.
+The contact sheets for `MyDir` with 359 images will be called `MyDir-01.jpg`, `MyDir-02.jpg`, and `MyDir-03.jpg` and will be placed at the same level as the directory.  This means your directory `MyDir` and all of the contact sheets `MyDir-nn.jpg` will appear together when sorted by name.
 
 ## Integrating into macOS Finder
 This is very easy to do:
