@@ -17,7 +17,7 @@ do
       cols=$( echo "scale=0; sqrt($temp) * 16" | /usr/bin/bc )
     fi
     suffix=$(printf "%02d" "$i")
-    nice -n 10 /opt/homebrew/bin/magick montage "${filenames[@]:$offset:$count}" -tile "$cols"x -geometry 240x240+4+4 -set label "%t" "$f/../$thedir-$suffix.jpg"
+    nice -n 10 /opt/homebrew/bin/magick montage -auto-orient "${filenames[@]:$offset:$count}" -tile "$cols"x -geometry 240x240+4+4 -set label "%t" "$f/../$thedir-$suffix.jpg"
     offset=$offset+144
   done
 done
