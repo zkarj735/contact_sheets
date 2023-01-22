@@ -1,7 +1,7 @@
 #!/bin/zsh
 for f in "$@"
 do
-  filenames=( $f/*.jpg )
+  filenames=( $f/*.(jpg|jpeg|tif|tiff|png )
   thedir="$(/usr/bin/basename "$f")"
   pics=${#filenames[@]}
   sheets=$( echo "scale=0; $pics/144+1" | /usr/bin/bc )
